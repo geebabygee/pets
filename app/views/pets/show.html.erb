@@ -1,0 +1,17 @@
+<div class="container">
+  <h1><%= @pet.name %></h1>
+
+  <ul>
+    <li>Address: <%= @pet.address %></li>
+    <li>Found on: <%= @pet.found_on %></li>
+  </ul>
+
+
+  <%= link_to 'Back to all pets', pets_path  %>
+  <br>
+  <%= link_to 'Add a lost pet', new_pet_path %>
+  <br>
+  <%= link_to  "Edit #{@pet.name}", edit_pet_path(@pet)  %>
+  <br>
+  <%= link_to "🗑 #{@pet.name}", pet_path(@pet), method: :delete %>
+</div>
